@@ -39,7 +39,13 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    if (interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/oHg5SJYRHA0?t=0s"]];
+        return NO;
+    }
+    else {
+        return (interfaceOrientation == UIInterfaceOrientationPortrait);        
+    }
 }
 
 - (IBAction)workshopButtonTapped:(id)sender 
