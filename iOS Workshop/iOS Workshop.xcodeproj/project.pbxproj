@@ -17,6 +17,9 @@
 		345875DF15535E2E0079125D /* WSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345875DE15535E2E0079125D /* WSDetailViewController.m */; };
 		345875E215535E2E0079125D /* WSMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345875E015535E2E0079125D /* WSMasterViewController.xib */; };
 		345875E515535E2E0079125D /* WSDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345875E315535E2E0079125D /* WSDetailViewController.xib */; };
+		345875EE15536EC20079125D /* WSSecretsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345875EC15536EC20079125D /* WSSecretsViewController.m */; };
+		345875EF15536EC20079125D /* WSSecretsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345875ED15536EC20079125D /* WSSecretsViewController.xib */; };
+		345875F3155372F70079125D /* WSLesson.m in Sources */ = {isa = PBXBuildFile; fileRef = 345875F2155372F70079125D /* WSLesson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,12 @@
 		345875DE15535E2E0079125D /* WSDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSDetailViewController.m; sourceTree = "<group>"; };
 		345875E115535E2E0079125D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WSMasterViewController.xib; sourceTree = "<group>"; };
 		345875E415535E2E0079125D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WSDetailViewController.xib; sourceTree = "<group>"; };
+		345875EB15536EC20079125D /* WSSecretsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSSecretsViewController.h; sourceTree = "<group>"; };
+		345875EC15536EC20079125D /* WSSecretsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSSecretsViewController.m; sourceTree = "<group>"; };
+		345875ED15536EC20079125D /* WSSecretsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSSecretsViewController.xib; sourceTree = "<group>"; };
+		345875F1155372F70079125D /* WSLesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLesson.h; sourceTree = "<group>"; };
+		345875F2155372F70079125D /* WSLesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLesson.m; sourceTree = "<group>"; };
+		345875F4155373360079125D /* WSDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSDomain.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +91,7 @@
 		345875CE15535E2D0079125D /* iOS Workshop */ = {
 			isa = PBXGroup;
 			children = (
+				345875F0155372EA0079125D /* Domain */,
 				345875D715535E2D0079125D /* WSAppDelegate.h */,
 				345875D815535E2E0079125D /* WSAppDelegate.m */,
 				345875DA15535E2E0079125D /* WSMasterViewController.h */,
@@ -90,6 +100,9 @@
 				345875DD15535E2E0079125D /* WSDetailViewController.h */,
 				345875DE15535E2E0079125D /* WSDetailViewController.m */,
 				345875E315535E2E0079125D /* WSDetailViewController.xib */,
+				345875EB15536EC20079125D /* WSSecretsViewController.h */,
+				345875EC15536EC20079125D /* WSSecretsViewController.m */,
+				345875ED15536EC20079125D /* WSSecretsViewController.xib */,
 				345875CF15535E2D0079125D /* Supporting Files */,
 			);
 			path = "iOS Workshop";
@@ -104,6 +117,16 @@
 				345875D615535E2D0079125D /* iOS Workshop-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		345875F0155372EA0079125D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				345875F1155372F70079125D /* WSLesson.h */,
+				345875F2155372F70079125D /* WSLesson.m */,
+				345875F4155373360079125D /* WSDomain.h */,
+			);
+			name = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +183,7 @@
 				345875D315535E2D0079125D /* InfoPlist.strings in Resources */,
 				345875E215535E2E0079125D /* WSMasterViewController.xib in Resources */,
 				345875E515535E2E0079125D /* WSDetailViewController.xib in Resources */,
+				345875EF15536EC20079125D /* WSSecretsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +198,8 @@
 				345875D915535E2E0079125D /* WSAppDelegate.m in Sources */,
 				345875DC15535E2E0079125D /* WSMasterViewController.m in Sources */,
 				345875DF15535E2E0079125D /* WSDetailViewController.m in Sources */,
+				345875EE15536EC20079125D /* WSSecretsViewController.m in Sources */,
+				345875F3155372F70079125D /* WSLesson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

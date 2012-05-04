@@ -7,15 +7,24 @@
 //
 
 #import "WSMasterViewController.h"
+#import "WSSecretsViewController.h"
+#import "WSDomain.h"
 
-@interface WSMasterViewController () {
-    NSMutableArray *_objects;
+
+// private interfaces allow for private instance variables, as well as @properties to be defined (unlike categories)
+@interface WSMasterViewController () 
+{
+    NSArray *_workshopLessons;
 }
+
+- (void)populateWorkshopLessons;
+
 @end
 
 @implementation WSMasterViewController
 
 @synthesize detailViewController = _detailViewController;
+@synthesize tableView = _tableView;
 
 #pragma mark - Memory management
 
@@ -23,25 +32,43 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Master", @"Master");
+        self.title = NSLocalizedString(@"Workshop", @"Workshop");
     }
     return self;
 }
 
 #pragma mark - View lifecycle
-							
+
+/*
+ viewDidLoad is called once, and only once, when the view is initialized and displayed on screen.
+ Use viewDidLoad for initial setup, such as laying out your UI, populating static data types, etc.
+ */
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    UIBarButtonItem *secretsButton = [[UIBarButtonItem alloc] initWithTitle:@"Secrets" style:UIBarButtonItemStyleBordered target:self action:@selector(secretsButtonTapped:)];
+    self.navigationItem.rightBarButtonItem = secretsButton;
+    
+    [self populateWorkshopLessons];
+}
+
+/*
+ viewWillAppear: is called each time prior to displaying the view on screen.  
+ Use viewWillAppear: to setup UI elements that you want populated before presenting to the user, such as
+ a user's twitter handle.
+ */
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
 }
 
 - (void)viewDidUnload
 {
+    [self setTableView:nil];
+    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -51,17 +78,16 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
-- (void)insertNewObject:(id)sender
+#pragma mark - Actions
+
+- (void)secretsButtonTapped:(id)sender
 {
-    if (!_objects) {
-        _objects = [[NSMutableArray alloc] init];
-    }
-    [_objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    WSSecretsViewController *aboutViewController = [[WSSecretsViewController alloc] initWithNibName:@"WSSecretsViewController" bundle:nil];
+    aboutViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self.navigationController presentModalViewController:aboutViewController animated:YES];
 }
 
-#pragma mark - Table View
+#pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -70,50 +96,50 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return _workshopLessons.count;
 }
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *LessonCellIdentifier = @"LessonCellIdentifier";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:LessonCellIdentifier];
+    
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:LessonCellIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
 
-
-    NSDate *object = [_objects objectAtIndex:indexPath.row];
-    cell.textLabel.text = [object description];
+    WSLesson *lesson = [_workshopLessons objectAtIndex:indexPath.row];
+    cell.textLabel.text = lesson.title;
+    
     return cell;
 }
 
-//- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    // Return NO if you do not want the specified item to be editable.
-//    return YES;
-//}
-//
-//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if (editingStyle == UITableViewCellEditingStyleDelete) {
-//        [_objects removeObjectAtIndex:indexPath.row];
-//        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-//    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-//        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-//    }
-//}
+#pragma mark - Table view delegate
 
+// Delgate method called when a user taps on a particular table cell at a given indexPath (section, row)
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (!self.detailViewController) {
         self.detailViewController = [[WSDetailViewController alloc] initWithNibName:@"WSDetailViewController" bundle:nil];
     }
-    NSDate *object = [_objects objectAtIndex:indexPath.row];
-    self.detailViewController.detailItem = object;
+    
+    WSLesson *lesson = [_workshopLessons objectAtIndex:indexPath.row];
+    
+    self.detailViewController.lesson = lesson;
     [self.navigationController pushViewController:self.detailViewController animated:YES];
+}
+
+#pragma mark - Private
+
+- (void)populateWorkshopLessons
+{
+    WSLesson *lesson = [WSLesson new];
+    lesson.title = @"Writing Objective-C";
+    lesson.url = [NSURL URLWithString:@"https://developer.apple.com/library/ios/#referencelibrary/GettingStarted/RoadMapiOS/Languages/WriteObjective-CCode/WriteObjective-CCode/WriteObjective-CCode.html"];
+    _workshopLessons = [[NSArray alloc] initWithObjects:lesson, nil];
 }
 
 @end

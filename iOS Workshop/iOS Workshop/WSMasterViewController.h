@@ -10,8 +10,9 @@
 #import "WSDetailViewController.h"
 
 
-@interface WSMasterViewController : UITableViewController
+@interface WSMasterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) WSDetailViewController *detailViewController;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

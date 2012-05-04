@@ -15,6 +15,7 @@
 
 @implementation WSDetailViewController
 
+@synthesize lesson = _lesson;
 @synthesize detailItem = _detailItem;
 @synthesize detailDescriptionLabel = _detailDescriptionLabel;
 
@@ -24,7 +25,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Detail", @"Detail");
     }
     return self;
 }
@@ -41,8 +41,9 @@
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
+    self.title = self.lesson.title;
     
+    // Update the user interface for the detail item.
     if (self.detailItem) {
         self.detailDescriptionLabel.text = [self.detailItem description];
     }

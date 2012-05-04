@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WSDomain.h"
 
 
 @interface WSDetailViewController : UIViewController
 
+@property (strong, nonatomic) WSLesson *lesson;
 @property (strong, nonatomic) id detailItem;
-
 @property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
 @end

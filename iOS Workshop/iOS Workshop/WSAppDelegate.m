@@ -12,8 +12,8 @@
 
 @implementation WSAppDelegate
 
-@synthesize window = _window;
-@synthesize navigationController = _navigationController;
+@synthesize window = _window; // prefix with _ to identify instance vs property
+@synthesize navigationController = _navigationController; 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
