@@ -34,9 +34,7 @@
 - (void)viewDidUnload
 {
     [self setWorkshopBarButtonItem:nil];
-    
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

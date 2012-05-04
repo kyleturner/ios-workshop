@@ -122,9 +122,9 @@
 		345875F0155372EA0079125D /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				345875F4155373360079125D /* WSDomain.h */,
 				345875F1155372F70079125D /* WSLesson.h */,
 				345875F2155372F70079125D /* WSLesson.m */,
-				345875F4155373360079125D /* WSDomain.h */,
 			);
 			name = Domain;
 			sourceTree = "<group>";

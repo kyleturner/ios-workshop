@@ -13,7 +13,6 @@
 @interface WSDetailViewController : UIViewController
 
 @property (strong, nonatomic) WSLesson *lesson;
-@property (strong, nonatomic) id detailItem;
-@property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end

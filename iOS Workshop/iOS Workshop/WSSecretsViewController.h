@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface WSSecretsViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *workshopBarButtonItem;
+
 - (IBAction)workshopButtonTapped:(id)sender;
 
 @end
