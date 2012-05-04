@@ -7,7 +7,6 @@
 //
 
 #import "WSMasterViewController.h"
-// KYLE: REMOVE THIS
 #import "WSSecretsViewController.h" 
 #import "WSDomain.h"
 
@@ -33,7 +32,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Workshop", @"Workshop");
+        self.title = @"Workshop";
     }
     return self;
 }
@@ -113,11 +112,10 @@
     return _workshopLessons.count;
 }
 
-// Customize the appearance of table view cells.
+// Here's where you will customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *LessonCellIdentifier = @"LessonCellIdentifier";
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:LessonCellIdentifier];
     
     if (cell == nil) {
@@ -126,7 +124,7 @@
     }
     
     // TODO (part 1a): Determine which WSLesson from the workshopsLessons array should populate the cell.
-    //       Populate each table cell’s textLabel text with a WSLesson’s title.
+    //                 Populate each table cell’s textLabel text with a WSLesson’s title.
     
     return cell;
 }

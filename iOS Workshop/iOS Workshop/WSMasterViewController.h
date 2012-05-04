@@ -13,6 +13,6 @@
 @interface WSMasterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) WSDetailViewController *detailViewController;
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UITableView *tableView; // IBOutlets link to objects in interface builder (.XIB) files.
 
 @end

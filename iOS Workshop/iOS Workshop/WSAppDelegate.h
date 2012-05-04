@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface WSAppDelegate : UIResponder <UIApplicationDelegate>
+@interface WSAppDelegate : UIResponder <UIApplicationDelegate> // @interface ClassName : Subclass <Protocol>
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UINavigationController *navigationController;
