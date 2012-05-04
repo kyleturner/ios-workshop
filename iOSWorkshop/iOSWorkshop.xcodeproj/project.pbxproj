@@ -1,0 +1,325 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3414E5281553591D00CAF203 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3414E5271553591D00CAF203 /* UIKit.framework */; };
+		3414E52A1553591D00CAF203 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3414E5291553591D00CAF203 /* Foundation.framework */; };
+		3414E52C1553591D00CAF203 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3414E52B1553591D00CAF203 /* CoreGraphics.framework */; };
+		3414E5321553591D00CAF203 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3414E5301553591D00CAF203 /* InfoPlist.strings */; };
+		3414E5341553591D00CAF203 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3414E5331553591D00CAF203 /* main.m */; };
+		3414E5381553591D00CAF203 /* WSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3414E5371553591D00CAF203 /* WSAppDelegate.m */; };
+		3414E53B1553591D00CAF203 /* WSMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3414E53A1553591D00CAF203 /* WSMasterViewController.m */; };
+		3414E53E1553591D00CAF203 /* WSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3414E53D1553591D00CAF203 /* WSDetailViewController.m */; };
+		3414E5411553591D00CAF203 /* WSMasterViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3414E53F1553591D00CAF203 /* WSMasterViewController_iPhone.xib */; };
+		3414E5441553591D00CAF203 /* WSMasterViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3414E5421553591D00CAF203 /* WSMasterViewController_iPad.xib */; };
+		3414E5471553591D00CAF203 /* WSDetailViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3414E5451553591D00CAF203 /* WSDetailViewController_iPhone.xib */; };
+		3414E54A1553591D00CAF203 /* WSDetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3414E5481553591D00CAF203 /* WSDetailViewController_iPad.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3414E5231553591D00CAF203 /* iOSWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3414E5271553591D00CAF203 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3414E5291553591D00CAF203 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3414E52B1553591D00CAF203 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3414E52F1553591D00CAF203 /* iOSWorkshop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSWorkshop-Info.plist"; sourceTree = "<group>"; };
+		3414E5311553591D00CAF203 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3414E5331553591D00CAF203 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3414E5351553591D00CAF203 /* iOSWorkshop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSWorkshop-Prefix.pch"; sourceTree = "<group>"; };
+		3414E5361553591D00CAF203 /* WSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSAppDelegate.h; sourceTree = "<group>"; };
+		3414E5371553591D00CAF203 /* WSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSAppDelegate.m; sourceTree = "<group>"; };
+		3414E5391553591D00CAF203 /* WSMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSMasterViewController.h; sourceTree = "<group>"; };
+		3414E53A1553591D00CAF203 /* WSMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSMasterViewController.m; sourceTree = "<group>"; };
+		3414E53C1553591D00CAF203 /* WSDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSDetailViewController.h; sourceTree = "<group>"; };
+		3414E53D1553591D00CAF203 /* WSDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSDetailViewController.m; sourceTree = "<group>"; };
+		3414E5401553591D00CAF203 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WSMasterViewController_iPhone.xib; sourceTree = "<group>"; };
+		3414E5431553591D00CAF203 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WSMasterViewController_iPad.xib; sourceTree = "<group>"; };
+		3414E5461553591D00CAF203 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WSDetailViewController_iPhone.xib; sourceTree = "<group>"; };
+		3414E5491553591D00CAF203 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WSDetailViewController_iPad.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3414E5201553591D00CAF203 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3414E5281553591D00CAF203 /* UIKit.framework in Frameworks */,
+				3414E52A1553591D00CAF203 /* Foundation.framework in Frameworks */,
+				3414E52C1553591D00CAF203 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3414E5181553591C00CAF203 = {
+			isa = PBXGroup;
+			children = (
+				3414E52D1553591D00CAF203 /* iOSWorkshop */,
+				3414E5261553591D00CAF203 /* Frameworks */,
+				3414E5241553591D00CAF203 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3414E5241553591D00CAF203 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3414E5231553591D00CAF203 /* iOSWorkshop.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3414E5261553591D00CAF203 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3414E5271553591D00CAF203 /* UIKit.framework */,
+				3414E5291553591D00CAF203 /* Foundation.framework */,
+				3414E52B1553591D00CAF203 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3414E52D1553591D00CAF203 /* iOSWorkshop */ = {
+			isa = PBXGroup;
+			children = (
+				3414E5361553591D00CAF203 /* WSAppDelegate.h */,
+				3414E5371553591D00CAF203 /* WSAppDelegate.m */,
+				3414E5391553591D00CAF203 /* WSMasterViewController.h */,
+				3414E53A1553591D00CAF203 /* WSMasterViewController.m */,
+				3414E53C1553591D00CAF203 /* WSDetailViewController.h */,
+				3414E53D1553591D00CAF203 /* WSDetailViewController.m */,
+				3414E53F1553591D00CAF203 /* WSMasterViewController_iPhone.xib */,
+				3414E5421553591D00CAF203 /* WSMasterViewController_iPad.xib */,
+				3414E5451553591D00CAF203 /* WSDetailViewController_iPhone.xib */,
+				3414E5481553591D00CAF203 /* WSDetailViewController_iPad.xib */,
+				3414E52E1553591D00CAF203 /* Supporting Files */,
+			);
+			path = iOSWorkshop;
+			sourceTree = "<group>";
+		};
+		3414E52E1553591D00CAF203 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3414E52F1553591D00CAF203 /* iOSWorkshop-Info.plist */,
+				3414E5301553591D00CAF203 /* InfoPlist.strings */,
+				3414E5331553591D00CAF203 /* main.m */,
+				3414E5351553591D00CAF203 /* iOSWorkshop-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3414E5221553591D00CAF203 /* iOSWorkshop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3414E54D1553591D00CAF203 /* Build configuration list for PBXNativeTarget "iOSWorkshop" */;
+			buildPhases = (
+				3414E51F1553591D00CAF203 /* Sources */,
+				3414E5201553591D00CAF203 /* Frameworks */,
+				3414E5211553591D00CAF203 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSWorkshop;
+			productName = iOSWorkshop;
+			productReference = 3414E5231553591D00CAF203 /* iOSWorkshop.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3414E51A1553591C00CAF203 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 3414E51D1553591C00CAF203 /* Build configuration list for PBXProject "iOSWorkshop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3414E5181553591C00CAF203;
+			productRefGroup = 3414E5241553591D00CAF203 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3414E5221553591D00CAF203 /* iOSWorkshop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3414E5211553591D00CAF203 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3414E5321553591D00CAF203 /* InfoPlist.strings in Resources */,
+				3414E5411553591D00CAF203 /* WSMasterViewController_iPhone.xib in Resources */,
+				3414E5441553591D00CAF203 /* WSMasterViewController_iPad.xib in Resources */,
+				3414E5471553591D00CAF203 /* WSDetailViewController_iPhone.xib in Resources */,
+				3414E54A1553591D00CAF203 /* WSDetailViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3414E51F1553591D00CAF203 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3414E5341553591D00CAF203 /* main.m in Sources */,
+				3414E5381553591D00CAF203 /* WSAppDelegate.m in Sources */,
+				3414E53B1553591D00CAF203 /* WSMasterViewController.m in Sources */,
+				3414E53E1553591D00CAF203 /* WSDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3414E5301553591D00CAF203 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3414E5311553591D00CAF203 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3414E53F1553591D00CAF203 /* WSMasterViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3414E5401553591D00CAF203 /* en */,
+			);
+			name = WSMasterViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		3414E5421553591D00CAF203 /* WSMasterViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3414E5431553591D00CAF203 /* en */,
+			);
+			name = WSMasterViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		3414E5451553591D00CAF203 /* WSDetailViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3414E5461553591D00CAF203 /* en */,
+			);
+			name = WSDetailViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		3414E5481553591D00CAF203 /* WSDetailViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3414E5491553591D00CAF203 /* en */,
+			);
+			name = WSDetailViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3414E54B1553591D00CAF203 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3414E54C1553591D00CAF203 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3414E54E1553591D00CAF203 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSWorkshop/iOSWorkshop-Prefix.pch";
+				INFOPLIST_FILE = "iOSWorkshop/iOSWorkshop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3414E54F1553591D00CAF203 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSWorkshop/iOSWorkshop-Prefix.pch";
+				INFOPLIST_FILE = "iOSWorkshop/iOSWorkshop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3414E51D1553591C00CAF203 /* Build configuration list for PBXProject "iOSWorkshop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3414E54B1553591D00CAF203 /* Debug */,
+				3414E54C1553591D00CAF203 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3414E54D1553591D00CAF203 /* Build configuration list for PBXNativeTarget "iOSWorkshop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3414E54E1553591D00CAF203 /* Debug */,
+				3414E54F1553591D00CAF203 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3414E51A1553591C00CAF203 /* Project object */;
+}
