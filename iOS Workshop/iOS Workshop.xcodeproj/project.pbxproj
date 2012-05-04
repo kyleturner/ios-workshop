@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		345875C915535E2D0079125D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345875C815535E2D0079125D /* UIKit.framework */; };
+		345875CB15535E2D0079125D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345875CA15535E2D0079125D /* Foundation.framework */; };
+		345875CD15535E2D0079125D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345875CC15535E2D0079125D /* CoreGraphics.framework */; };
+		345875D315535E2D0079125D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 345875D115535E2D0079125D /* InfoPlist.strings */; };
+		345875D515535E2D0079125D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 345875D415535E2D0079125D /* main.m */; };
+		345875D915535E2E0079125D /* WSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 345875D815535E2E0079125D /* WSAppDelegate.m */; };
+		345875DC15535E2E0079125D /* WSMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345875DB15535E2E0079125D /* WSMasterViewController.m */; };
+		345875DF15535E2E0079125D /* WSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345875DE15535E2E0079125D /* WSDetailViewController.m */; };
+		345875E215535E2E0079125D /* WSMasterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345875E015535E2E0079125D /* WSMasterViewController.xib */; };
+		345875E515535E2E0079125D /* WSDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 345875E315535E2E0079125D /* WSDetailViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		345875C415535E2D0079125D /* iOS Workshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Workshop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		345875C815535E2D0079125D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		345875CA15535E2D0079125D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		345875CC15535E2D0079125D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		345875D015535E2D0079125D /* iOS Workshop-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS Workshop-Info.plist"; sourceTree = "<group>"; };
+		345875D215535E2D0079125D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		345875D415535E2D0079125D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		345875D615535E2D0079125D /* iOS Workshop-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS Workshop-Prefix.pch"; sourceTree = "<group>"; };
+		345875D715535E2D0079125D /* WSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSAppDelegate.h; sourceTree = "<group>"; };
+		345875D815535E2E0079125D /* WSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSAppDelegate.m; sourceTree = "<group>"; };
+		345875DA15535E2E0079125D /* WSMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSMasterViewController.h; sourceTree = "<group>"; };
+		345875DB15535E2E0079125D /* WSMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSMasterViewController.m; sourceTree = "<group>"; };
+		345875DD15535E2E0079125D /* WSDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSDetailViewController.h; sourceTree = "<group>"; };
+		345875DE15535E2E0079125D /* WSDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSDetailViewController.m; sourceTree = "<group>"; };
+		345875E115535E2E0079125D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WSMasterViewController.xib; sourceTree = "<group>"; };
+		345875E415535E2E0079125D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/WSDetailViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		345875C115535E2D0079125D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				345875C915535E2D0079125D /* UIKit.framework in Frameworks */,
+				345875CB15535E2D0079125D /* Foundation.framework in Frameworks */,
+				345875CD15535E2D0079125D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		345875B915535E2D0079125D = {
+			isa = PBXGroup;
+			children = (
+				345875CE15535E2D0079125D /* iOS Workshop */,
+				345875C715535E2D0079125D /* Frameworks */,
+				345875C515535E2D0079125D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		345875C515535E2D0079125D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				345875C415535E2D0079125D /* iOS Workshop.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		345875C715535E2D0079125D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				345875C815535E2D0079125D /* UIKit.framework */,
+				345875CA15535E2D0079125D /* Foundation.framework */,
+				345875CC15535E2D0079125D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		345875CE15535E2D0079125D /* iOS Workshop */ = {
+			isa = PBXGroup;
+			children = (
+				345875D715535E2D0079125D /* WSAppDelegate.h */,
+				345875D815535E2E0079125D /* WSAppDelegate.m */,
+				345875DA15535E2E0079125D /* WSMasterViewController.h */,
+				345875DB15535E2E0079125D /* WSMasterViewController.m */,
+				345875E015535E2E0079125D /* WSMasterViewController.xib */,
+				345875DD15535E2E0079125D /* WSDetailViewController.h */,
+				345875DE15535E2E0079125D /* WSDetailViewController.m */,
+				345875E315535E2E0079125D /* WSDetailViewController.xib */,
+				345875CF15535E2D0079125D /* Supporting Files */,
+			);
+			path = "iOS Workshop";
+			sourceTree = "<group>";
+		};
+		345875CF15535E2D0079125D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				345875D015535E2D0079125D /* iOS Workshop-Info.plist */,
+				345875D115535E2D0079125D /* InfoPlist.strings */,
+				345875D415535E2D0079125D /* main.m */,
+				345875D615535E2D0079125D /* iOS Workshop-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		345875C315535E2D0079125D /* iOS Workshop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 345875E815535E2E0079125D /* Build configuration list for PBXNativeTarget "iOS Workshop" */;
+			buildPhases = (
+				345875C015535E2D0079125D /* Sources */,
+				345875C115535E2D0079125D /* Frameworks */,
+				345875C215535E2D0079125D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS Workshop";
+			productName = "iOS Workshop";
+			productReference = 345875C415535E2D0079125D /* iOS Workshop.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		345875BB15535E2D0079125D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WS;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 345875BE15535E2D0079125D /* Build configuration list for PBXProject "iOS Workshop" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 345875B915535E2D0079125D;
+			productRefGroup = 345875C515535E2D0079125D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				345875C315535E2D0079125D /* iOS Workshop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		345875C215535E2D0079125D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				345875D315535E2D0079125D /* InfoPlist.strings in Resources */,
+				345875E215535E2E0079125D /* WSMasterViewController.xib in Resources */,
+				345875E515535E2E0079125D /* WSDetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		345875C015535E2D0079125D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				345875D515535E2D0079125D /* main.m in Sources */,
+				345875D915535E2E0079125D /* WSAppDelegate.m in Sources */,
+				345875DC15535E2E0079125D /* WSMasterViewController.m in Sources */,
+				345875DF15535E2E0079125D /* WSDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		345875D115535E2D0079125D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				345875D215535E2D0079125D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		345875E015535E2E0079125D /* WSMasterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				345875E115535E2E0079125D /* en */,
+			);
+			name = WSMasterViewController.xib;
+			sourceTree = "<group>";
+		};
+		345875E315535E2E0079125D /* WSDetailViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				345875E415535E2E0079125D /* en */,
+			);
+			name = WSDetailViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		345875E615535E2E0079125D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		345875E715535E2E0079125D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		345875E915535E2E0079125D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOS Workshop/iOS Workshop-Prefix.pch";
+				INFOPLIST_FILE = "iOS Workshop/iOS Workshop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		345875EA15535E2E0079125D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOS Workshop/iOS Workshop-Prefix.pch";
+				INFOPLIST_FILE = "iOS Workshop/iOS Workshop-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		345875BE15535E2D0079125D /* Build configuration list for PBXProject "iOS Workshop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345875E615535E2E0079125D /* Debug */,
+				345875E715535E2E0079125D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		345875E815535E2E0079125D /* Build configuration list for PBXNativeTarget "iOS Workshop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345875E915535E2E0079125D /* Debug */,
+				345875EA15535E2E0079125D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 345875BB15535E2D0079125D /* Project object */;
+}
