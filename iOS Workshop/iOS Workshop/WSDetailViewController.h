@@ -12,7 +12,7 @@
 
 @interface WSDetailViewController : UIViewController
 
-@property (strong, nonatomic) WSLesson *lesson;
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+// TODO (part 2a): add a WSLesson property (the WSDomain has been imported for you)
+// TODO (part 3b): add an IBOutlet UIWebView property
 
 @end

@@ -15,9 +15,6 @@
 
 @implementation WSDetailViewController
 
-@synthesize lesson = _lesson;
-@synthesize webView = _webView;
-
 #pragma mark - Memory management
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -42,17 +39,16 @@
 {
     [super viewWillAppear:animated];
     
-    [self.webView loadRequest:[NSURLRequest requestWithURL:self.lesson.url]];
+    // TODO (part 4): load the web view's request via the lesson's URL
 }
 
 - (void)configureView
 {
-    self.title = self.lesson.title;
+    // TODO (part 3a): set the navigation's title to be the lesson's title
 }
 
 - (void)viewDidUnload
 {
-    [self setWebView:nil];
     [super viewDidUnload];
 }
 

@@ -40,7 +40,7 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     if (interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/oHg5SJYRHA0?t=0s"]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://youtu.be/oHg5SJYRHA0?t=0s&autoplay=1"]];
         return NO;
     }
     else {

@@ -48,7 +48,6 @@
 {
     [super viewDidLoad];
 
-    // KYLE: REMOVE THIS...
     UIBarButtonItem *secretsButton = [[UIBarButtonItem alloc] initWithTitle:@"Secrets" style:UIBarButtonItemStyleBordered target:self action:@selector(secretsButtonTapped:)];
     self.navigationItem.rightBarButtonItem = secretsButton;
     
@@ -65,6 +64,7 @@
 {
     [super viewWillAppear:animated];
     
+    // adds a nice animation effect when returning from the detail view, animating the deselection of the previously selected row.
     [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
 }
 
@@ -96,11 +96,8 @@
 
 - (void)secretsButtonTapped:(id)sender
 {
-    // TODO: You have a WSSecretsViewController class.  Allocate and initialize secretsViewController when the secretsButton is tapped.
     WSSecretsViewController *secretsViewController = [[WSSecretsViewController alloc] initWithNibName:@"WSSecretsViewController" bundle:nil];
     secretsViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-    
-    // TODO: use your navigation controller to PRESENT secretsViewController modally!
     [self.navigationController presentModalViewController:secretsViewController animated:YES];
 }
 
@@ -128,11 +125,8 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    // TODO1: Determine which WSLesson from the workshopsLessonArray should populate the cell.
-    //       Populate each table cell’s label text with a WSLesson’s title.
-
-    WSLesson *lesson = [_workshopLessons objectAtIndex:indexPath.row]; // KYLE: REMOVE THIS
-    cell.textLabel.text = lesson.title; // KYLE: REMOVE THIS
+    // TODO (part 1a): Determine which WSLesson from the workshopsLessons array should populate the cell.
+    //       Populate each table cell’s textLabel text with a WSLesson’s title.
     
     return cell;
 }
@@ -147,13 +141,10 @@
         self.detailViewController = [[WSDetailViewController alloc] initWithNibName:@"WSDetailViewController" bundle:nil];
     }
     
-    // TODO: A detail view controller has a "lesson" object.  Set the detailViewController's lesson to the lesson
+    // TODO (part 2b): A detail view controller has a "lesson" object.  Set the detailViewController's lesson to the lesson
     //       that was selected at the selected indexPath, before pushing on the view.
-    WSLesson *lesson = [_workshopLessons objectAtIndex:indexPath.row];
-    self.detailViewController.lesson = lesson;
     
-    // TODO: use your navigation controller to PUSH the detailViewController onto the stack
-    [self.navigationController pushViewController:self.detailViewController animated:YES];
+    // TODO (part 1b): use your navigation controller to PUSH the detailViewController onto the stack
 }
 
 @end
