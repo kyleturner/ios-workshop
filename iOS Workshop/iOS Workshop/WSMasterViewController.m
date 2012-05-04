@@ -130,6 +130,7 @@
     
     // TODO1: Determine which WSLesson from the workshopsLessonArray should populate the cell.
     //       Populate each table cell’s label text with a WSLesson’s title.
+
     WSLesson *lesson = [_workshopLessons objectAtIndex:indexPath.row]; // KYLE: REMOVE THIS
     cell.textLabel.text = lesson.title; // KYLE: REMOVE THIS
     
@@ -147,17 +148,12 @@
     }
     
     // TODO: A detail view controller has a "lesson" object.  Set the detailViewController's lesson to the lesson
-    //       that was selected at the selected indexPath.  
+    //       that was selected at the selected indexPath, before pushing on the view.
     WSLesson *lesson = [_workshopLessons objectAtIndex:indexPath.row];
     self.detailViewController.lesson = lesson;
     
-    // TODO2: use your navigation controller to PUSH the detailViewController onto the stack
-    
-    
+    // TODO: use your navigation controller to PUSH the detailViewController onto the stack
     [self.navigationController pushViewController:self.detailViewController animated:YES];
-    
-    
-    
 }
 
 @end
